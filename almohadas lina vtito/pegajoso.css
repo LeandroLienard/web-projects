@@ -1,0 +1,122 @@
+html {
+    font-family: 'Outfit', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+}
+
+/* .banner {
+    width: 100%;
+    padding: 9rem 3rem;
+    text-align: center;
+    background: url(../img/apertura.jpg);
+    background-color: rgb(0, 0, 0, 0.3);
+    background-blend-mode: soft-light;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+} */
+
+.logo {
+    width: 40px;
+    margin: 0;
+}
+
+.logo img {
+    height: 2.5rem;
+}
+.banner h1 {
+    color: white;
+}
+
+:root {
+    --middle-blue-green: #98dbd0ff;
+    --keppel: #13c5adff;
+    --space-cadet: #2c3c5cff;
+    --cultured: #f3f3f3ff;
+    --roman-silver: #7c8595ff;
+}
+
+.container-menu {
+    width: 100%;
+    height: 60px;
+    background: var(--space-cadet);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem ;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-item {
+    color:white;
+    margin: 0 1.5rem;
+    text-decoration: none;
+}
+
+/* HOME*/
+
+.home {
+    background:  url("../img/cama_recortada5.jpg") ;
+    height: 100vh;    /* vh implica el 100% de lo q sea la pantalla*/
+    /* height: 38rem;  */
+    background-color: var(--space-cadet); /* #F3F3F3 */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    background-position: center;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-size: 100%; 
+}
+
+.subtitle {
+    font-size: 40px;
+    z-index: 1;
+    text-align: center;
+    /* color:  rgb(216, 204, 204); */
+    color: white;
+    /* box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.3); */
+}
+.home 
+p{
+    text-align: center; 
+    font-size: 25px;
+    z-index: 1;
+
+}
+
+.color-overlay {
+    background: linear-gradient(to top right, #2c3c5cff, #7c8595ff);
+    height: 100vh;
+    width: 100% ;
+    opacity: 0.3;
+    position: absolute;
+}
+
+/* Articles*/
+
+.main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article {
+    width: 70%;
+}

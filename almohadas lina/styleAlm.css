@@ -1,0 +1,166 @@
+/*
+/* CSS HEX */
+:root {
+    --middle-blue-green: #98dbd0ff;
+    --keppel: #13c5adff;
+    --space-cadet: #2c3c5cff;
+    --cultured: #f3f3f3ff;
+    --roman-silver: #7c8595ff;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+/* HEADER Y MENU */
+
+html {
+    font-family: 'Outfit', sans-serif;
+}
+
+body{ 
+    margin: 0;
+    background-color: #F3F3F3;
+}
+
+header {
+    background-color: #F3F3F3;
+    /* padding: 1rem 1rem; */
+    /* height: 500px; */
+    margin : 0;
+    overflow: visible;
+
+}
+
+.centrado{  
+    margin: 0 auto; 
+    display: flex;
+    /* overflow: visible; */
+} 
+
+  
+.sticky-menu {
+    z-index: 10;
+    position: sticky;
+    top: 0px;
+}
+
+.nav {
+    background-color: #2c3c5c;
+    text-align: center;
+}
+
+
+.nav_li{
+    display: inline-block;
+    padding: 12px;
+    color: white;
+}
+
+.nav_li a{
+    color: white;
+    text-decoration: none;
+    transition: color 0.5s ease;
+    font-size: 18px;
+    /* font-weight: bold; */
+}
+
+.nav_li a:hover {
+
+    color: rgb(150, 128, 247);
+}
+
+
+/*BODY: HOME */
+.home {
+    background:  url("../img/cama_recortada5.jpg") ;
+    height: 100vh;  /* vh implica el 100% de lo q sea la pantalla*/
+    background-color: #F3F3F3;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-size: 100%; 
+}
+
+.subtitle {
+    font-size: 40px;
+    z-index: 1;
+    text-align: center;
+    /* color:  rgb(216, 204, 204); */
+    color: white;
+    /* box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.3); */
+}
+:root {
+    --middle-blue-green: #98dbd0ff;
+    --keppel: #13c5adff;
+    --space-cadet: #2c3c5cff;
+    --cultured: #f3f3f3ff;
+    --roman-silver: #7c8595ff;
+}
+
+.home p{
+    text-align: center; 
+    font-size: 25px;
+    z-index: 1;
+
+}
+
+.color-overlay {
+    background: linear-gradient(to top right, #2c3c5cff, #7c8595ff);
+    height: 100vh;
+    width: 100% ;
+    opacity: 0.3;
+    position: absolute;
+}
+
+/*Estilo BLog*/
+.container{
+    width: 400px;
+    margin: 0 auto;
+}
+
+section article {
+    /* transition: ; */
+    transition: box-shadow 0.3s ease;   /* elemento tiempo tipoTransicion*/
+    background-color: #fff;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0;
+    cursor: pointer;
+}
+section article:hover {/*cuando pasas el pointer sobre el article genera una sombrita*/
+    box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.3);    /*desp-a-der desp-a-abjo difuminacion color-con-trasnparencia */
+}
+
+section article h2, section article p{
+    margin: 1rem;
+}
+
+footer{
+    background-color: #222;
+    padding: 3rem;
+    color: #fff;
+}
+
+footer section{
+    float: right;
+}
+
+footer p {
+    margin:0;
+}
+
+footer a {
+    transition: color 0.3s ease;
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: cornflowerblue;
+}
