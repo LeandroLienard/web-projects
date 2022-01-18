@@ -10,6 +10,8 @@ html {
 body {
     margin: 0;
     padding: 0;
+    background-color: var(--cultured);
+
     /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
 }
 
@@ -74,14 +76,13 @@ body {
     background-color: var(--space-cadet); /* #F3F3F3 */
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-attachment: fixed; */
+    background-attachment: fixed;
     background-position: center;
     position: relative;
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
-    background-size: 100%; 
 }
 
 .subtitle {
@@ -92,13 +93,13 @@ body {
     color: white;
     /* box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.3); */
 }
-.home 
-p{
+
+/* .home p{
     text-align: center; 
     font-size: 25px;
     z-index: 1;
 
-}
+} */
 
 .color-overlay {
     background: linear-gradient(to top right, #2c3c5cff, #7c8595ff);
@@ -110,13 +111,48 @@ p{
 
 /* Articles*/
 
-.main-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.container{
+    width: 400px;
+    margin: 0 auto;
 }
 
-.article {
-    width: 70%;
+section article {
+    /* transition: ; */
+    transition: box-shadow 0.3s ease;   /* elemento tiempo tipoTransicion*/
+    background-color: #fff;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0;
+    cursor: pointer;
+}
+section article:hover {/*cuando pasas el pointer sobre el article genera una sombrita*/
+    box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.3);    /*desp-a-der desp-a-abjo difuminacion color-con-trasnparencia */
+}
+
+section article h2, section article p{
+    margin: 1rem;
+}
+
+footer{
+    background-color: #222;
+    padding: 3rem;
+    color: #fff;
+}
+
+footer section{
+    float: right;
+}
+
+footer p {
+    margin:0;
+}
+
+footer a {
+    transition: color 0.3s ease;
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: cornflowerblue;
 }
