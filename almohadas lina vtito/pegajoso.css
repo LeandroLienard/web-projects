@@ -1,3 +1,11 @@
+:root {
+    --middle-blue-green: #98dbd0ff;
+    --keppel: #13c5adff;
+    --space-cadet: #2c3c5cff;
+    --cultured: #f3f3f3ff;
+    --roman-silver: #7c8595ff;
+}
+
 html {
     font-family: 'Outfit', sans-serif;
 }
@@ -15,17 +23,6 @@ body {
     /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
 }
 
-/* .banner {
-    width: 100%;
-    padding: 9rem 3rem;
-    text-align: center;
-    background: url(../img/apertura.jpg);
-    background-color: rgb(0, 0, 0, 0.3);
-    background-blend-mode: soft-light;
-    background-size: cover;
-    background-position: center;
-    box-sizing: border-box;
-} */
 
 .logo {
     width: 40px;
@@ -39,13 +36,6 @@ body {
     color: white;
 }
 
-:root {
-    --middle-blue-green: #98dbd0ff;
-    --keppel: #13c5adff;
-    --space-cadet: #2c3c5cff;
-    --cultured: #f3f3f3ff;
-    --roman-silver: #7c8595ff;
-}
 
 .container-menu {
     width: 100%;
@@ -65,12 +55,18 @@ body {
     color:white;
     margin: 0 1.5rem;
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    cursor: pointer;
+    color: var(--middle-blue-green);
 }
 
 /* HOME*/
 
 .home {
-    background:  url("../img/cama_recortada5.jpg") ;
+    background:  url("../img/background/cama_recortada5.jpg") ;
     height: 100vh;    /* vh implica el 100% de lo q sea la pantalla*/
     /* height: 38rem;  */
     background-color: var(--space-cadet); /* #F3F3F3 */
@@ -96,9 +92,8 @@ body {
 
 /* .home p{
     text-align: center; 
-    font-size: 25px;
-    z-index: 1;
 
+    z-index: 1;
 } */
 
 .color-overlay {
@@ -109,29 +104,57 @@ body {
     position: absolute;
 }
 
+
 /* Articles*/
 
-.container{
-    width: 400px;
+
+.container {
+    width: 90%;
     margin: 0 auto;
+    overflow: hidden;
+    padding: 80px 0;
+    max-width: 1200px;
 }
 
-section article {
-    /* transition: ; */
-    transition: box-shadow 0.3s ease;   /* elemento tiempo tipoTransicion*/
-    background-color: #fff;
-    margin: 1rem 0;
-    border-radius: 0.5rem;
-    padding: 0.25rem 0;
-    cursor: pointer;
+.about {
+    min-height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 80px;
+    justify-content: center;
+    align-items: center;
 }
-section article:hover {/*cuando pasas el pointer sobre el article genera una sombrita*/
-    box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.3);    /*desp-a-der desp-a-abjo difuminacion color-con-trasnparencia */
+.about h2 {
+    color: var(--space-cadet);
+    /* font-size: 30px; */
+    text-align: left;
 }
 
-section article h2, section article p{
-    margin: 1rem;
+.about__img {
+    text-align: center;
 }
+
+.about__img--left {
+    text-align: left;
+}
+
+.about__picture {
+    max-width: 80%;
+}
+
+.about__paragraph {
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+
+
+
+
+
+/*Footer*/
+
 
 footer{
     background-color: #222;
