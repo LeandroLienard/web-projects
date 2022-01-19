@@ -72,7 +72,7 @@ header {
 
 /*BODY: HOME */
 .home {
-    background:  url("../img/cama_recortada5.jpg") ;
+    background:  url("../img/background/cama_recortada5.jpg") ;
     height: 100vh;  /* vh implica el 100% de lo q sea la pantalla*/
     background-color: #F3F3F3;
     background-repeat: no-repeat;
