@@ -8,6 +8,7 @@
 
 html {
     font-family: 'Outfit', sans-serif;
+    scroll-behavior: smooth; /* transicion  entre hipervinculos*/
 }
 
 *{
@@ -105,7 +106,7 @@ body {
 }
 
 
-/* Productos*/
+/* Productos y sobre Nosotrso*/
 
 .container {
     width: 90%;
@@ -159,12 +160,76 @@ body {
     max-width: 80%;
 }
 
-/* Otros productos */
+/* Otros productos(grid) */
 .otros {
-    background-color: var(--roman-silver);
+    /* background-color: var(--roman-silver); */
+
 }
  
-/**/
+.otros__grid {
+    display: grid;
+    height: 550px;
+    grid-template-areas: 
+    "img1 img1 img2 img3"
+    "img1 img1 img4 img5";
+    gap: 10px;
+}
+
+.otros__grid img {
+    width: 100%;
+}
+
+.otros__item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.otros__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.3;
+
+}
+
+.otros__item:nth-of-type(1) {
+    grid-area: img1;
+}
+
+.otros__item:nth-of-type(2) {
+    grid-area: img2;
+}
+.otros__item:nth-of-type(3) {
+    grid-area: img3;
+}
+.otros__item:nth-of-type(4) {
+    grid-area: img4;
+}
+.otros__item:nth-of-type(5) {
+    grid-area: img5;
+}
+
+.otros__hover {
+    position: absolute;
+    background: var(--keppel);
+    height: 100%;
+    width: 100%;
+    color: var(--middle-blue-green);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    transform:  translateX(100%);
+    transition: 0.3s ease-in-out;
+}
+
+.otros__item:hover .otros__hover {
+    transform:  translateX(0%);
+}
 
 /*Footer*/
 
