@@ -105,8 +105,7 @@ body {
 }
 
 
-/* Articles*/
-
+/* Productos*/
 
 .container {
     width: 90%;
@@ -116,7 +115,7 @@ body {
     max-width: 1200px;
 }
 
-.producto {
+.producto, .nosotros{
     min-height: 400px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -125,7 +124,7 @@ body {
     align-items: center;
 }
 
-.producto .subtitle {
+.producto .subtitle, .nosotros h2{
     color: var(--space-cadet);
     font-size: 2.5rem;
     margin-bottom: 35px;
@@ -146,16 +145,26 @@ body {
     max-width: 90%;
 }
 
-.producto__paragraph {
+.producto__paragraph, .nosotros__paragraph {
     margin-bottom: 20px;
     line-height: 1.5;
     font-weight: 300;
 }
 
+.nosotros__img {
+    text-align: center;    
+}
 
+.nosotros__picture {
+    max-width: 80%;
+}
 
-
-
+/* Otros productos */
+.otros {
+    background-color: var(--roman-silver);
+}
+ 
+/**/
 
 /*Footer*/
 
