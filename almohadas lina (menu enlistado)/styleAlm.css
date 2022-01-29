@@ -1,49 +1,3 @@
-/*
-
-.menu-item {
-    color:white;
-    margin: 0 1.5rem;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.menu-item:hover {
-    cursor: pointer;
-    color: var(--middle-blue-green);
-}
-
-
-.submenu {
-    position: absolute;
-    background-color: var(--roman-silver);
-    text-decoration: none;
-    transition: color 0.3s ease;
-    width: 8rem;
-    display: none;
-    list-style-type: none;
-    /* visibility: hidden; */
-}
-
-
-.submenu-item {
-    color: white;
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.submenu-item:hover {
-    cursor: pointer;
-    color: var(--middle-blue-green);
-}
-
-.menu-item:hover .submenu{ /* cuando hover => efecto sobre .submenu*/
-    display: block;
-    /* visibility: visible; */
-}
-
-/* CSS HEX */
 :root {
     --middle-blue-green: #98dbd0ff;
     --keppel: #13c5adff;
@@ -51,76 +5,74 @@
     --cultured: #f3f3f3ff;
     --roman-silver: #7c8595ff;
 }
+
+html {
+    font-family: 'Outfit', sans-serif;
+    scroll-behavior: smooth; /* transicion  entre hipervinculos*/
+}
+
 *{
     margin: 0;
     padding: 0;
 }
-/* HEADER Y MENU */
 
-html {
-    font-family: 'Outfit', sans-serif;
-}
-
-body{ 
+body {
     margin: 0;
-    background-color: #F3F3F3;
+    padding: 0;
+    background-color: var(--cultured);
+
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
 }
 
-header {
-    background-color: #F3F3F3;
-    /* padding: 1rem 1rem; */
-    /* height: 500px; */
-    margin : 0;
-    overflow: visible;
 
+.logo {
+    width: 40px;
+    margin: 0;
 }
 
-.centrado{  
-    margin: 0 auto; 
+.logo img {
+    height: 2.5rem;
+}
+.banner h1 {
+    color: white;
+}
+
+
+.container-menu {
+    width: 100%;
+    height: 60px;
+    background: var(--space-cadet);
     display: flex;
-    /* overflow: visible; */
-} 
-
-  
-.sticky-menu {
-    z-index: 10;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem ;
+    box-sizing: border-box;
     position: sticky;
-    top: 0px;
+    top: 0;
+    z-index: 10;
 }
 
-.nav {
-    background-color: #2c3c5c;
-    text-align: center;
-}
-
-
-.nav_li{
-    display: inline-block;
-    padding: 12px;
-    color: white;
-}
-
-.nav_li a{
-    color: white;
+.nav-item {
+    color:white;
+    margin: 0 1.5rem;
     text-decoration: none;
-    transition: color 0.5s ease;
-    font-size: 18px;
-    /* font-weight: bold; */
+    transition: color 0.3s ease;
 }
 
-.nav_li a:hover {
-
-    color: rgb(150, 128, 247);
+.nav-item:hover {
+    cursor: pointer;
+    color: var(--middle-blue-green);
 }
 
+/* HOME*/
 
-/*BODY: HOME */
 .home {
     background:  url("../img/background/cama_recortada5.jpg") ;
-    height: 100vh;  /* vh implica el 100% de lo q sea la pantalla*/
-    background-color: #F3F3F3;
+    height: 100vh;    /* vh implica el 100% de lo q sea la pantalla*/
+    /* height: 38rem;  */
+    background-color: var(--space-cadet); /* #F3F3F3 */
     background-repeat: no-repeat;
-    /* background-size: cover; */
+    background-size: cover;
     background-attachment: fixed;
     background-position: center;
     position: relative;
@@ -128,7 +80,6 @@ header {
     justify-content: center;
     display: flex;
     flex-direction: column;
-    background-size: 100%; 
 }
 
 .subtitle {
@@ -139,20 +90,12 @@ header {
     color: white;
     /* box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.3); */
 }
-:root {
-    --middle-blue-green: #98dbd0ff;
-    --keppel: #13c5adff;
-    --space-cadet: #2c3c5cff;
-    --cultured: #f3f3f3ff;
-    --roman-silver: #7c8595ff;
-}
 
-.home p{
+/* .home p{
     text-align: center; 
-    font-size: 25px;
-    z-index: 1;
 
-}
+    z-index: 1;
+} */
 
 .color-overlay {
     background: linear-gradient(to top right, #2c3c5cff, #7c8595ff);
@@ -162,28 +105,134 @@ header {
     position: absolute;
 }
 
-/*Estilo BLog*/
-.container{
-    width: 400px;
+
+/* Productos y sobre Nosotrso*/
+
+.container {
+    width: 90%;
     margin: 0 auto;
+    overflow: hidden;
+    padding: 80px 0;
+    max-width: 1200px;
 }
 
-section article {
-    /* transition: ; */
-    transition: box-shadow 0.3s ease;   /* elemento tiempo tipoTransicion*/
-    background-color: #fff;
-    margin: 1rem 0;
-    border-radius: 0.5rem;
-    padding: 0.25rem 0;
+.producto, .nosotros{
+    min-height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+.producto .subtitle, .nosotros h2{
+    color: var(--space-cadet);
+    font-size: 2.5rem;
+    margin-bottom: 35px;
+    text-align: left;
+
+}
+
+
+.producto__img {
+    text-align: center;
+}
+
+.producto__img--left {
+    text-align: left;
+}
+
+.producto__picture {
+    max-width: 90%;
+}
+
+.producto__paragraph, .nosotros__paragraph {
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+.nosotros__img {
+    text-align: center;    
+}
+
+.nosotros__picture {
+    max-width: 80%;
+}
+
+/* Otros productos(grid) */
+.otros {
+    /* background-color: var(--roman-silver); */
+
+}
+ 
+.otros__grid {
+    display: grid;
+    height: 550px;
+    grid-template-areas: 
+    "img1 img1 img2 img3"
+    "img1 img1 img4 img5";
+    gap: 10px;
+}
+
+.otros__grid img {
+    width: 100%;
+}
+
+.otros__item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.otros__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     cursor: pointer;
-}
-section article:hover {/*cuando pasas el pointer sobre el article genera una sombrita*/
-    box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.3);    /*desp-a-der desp-a-abjo difuminacion color-con-trasnparencia */
+    /* opacity: 0.3; */
+
 }
 
-section article h2, section article p{
-    margin: 1rem;
+.otros__item:nth-of-type(1) {
+    grid-area: img1;
 }
+
+.otros__item:nth-of-type(2) {
+    grid-area: img2;
+}
+.otros__item:nth-of-type(3) {
+    grid-area: img3;
+}
+.otros__item:nth-of-type(4) {
+    grid-area: img4;
+}
+.otros__item:nth-of-type(5) {
+    grid-area: img5;
+}
+
+.otros__hover {
+    position: absolute;
+    background: var(--keppel);
+    height: 100%;
+    width: 100%;
+    color: var(--middle-blue-green);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    transform:  translateX(100%);
+    transition: 0.3s ease-in-out;
+}
+
+.otros__item:hover .otros__hover {
+    transform:  translateX(0%);
+}
+
+/*Footer*/
+
 
 footer{
     background-color: #222;
