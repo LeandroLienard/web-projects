@@ -191,7 +191,7 @@ body {
     height: 100%;
     object-fit: cover;
     cursor: pointer;
-    opacity: 0.3;
+    /* opacity: 0.3; */
 
 }
 
