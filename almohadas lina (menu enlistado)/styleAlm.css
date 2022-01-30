@@ -52,17 +52,48 @@ body {
     z-index: 10;
 }
 
-.nav-item {
+.navegacion ul{
+    list-style: none;
+}
+
+.menu > li {
+    display: inline-block;
+}
+
+.menu-link ,.submenu-link {
+    display: block;
+    /* padding:  15px 20px; */
+    color: white;
+    text-decoration: none ;
+}
+
+.menu-link:hover {
+    color: var(--keppel);   /* LO DEJE MIN 12:55 codytron Como hacer un Menú Desplegable facil y sencillo con HTML y CSS
+    */
+}
+.menu-item {
+    display: inline-block;
     color:white;
     margin: 0 1.5rem;
     text-decoration: none;
-    transition: color 0.3s ease;
+    
 }
 
-.nav-item:hover {
+.menu-item:hover {
     cursor: pointer;
     color: var(--middle-blue-green);
 }
+
+.submenu-item{
+    list-style-type: none;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+
+}
+
+
+
 
 /* HOME*/
 
@@ -161,11 +192,11 @@ body {
 }
 
 /* Otros productos(grid) */
-.otros {
+/* .otros {
     /* background-color: var(--roman-silver); */
 
-}
- 
+/* } */
+
 .otros__grid {
     display: grid;
     height: 550px;
